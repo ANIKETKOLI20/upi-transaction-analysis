@@ -4,9 +4,11 @@
 
 Unified Payments Interface (UPI) has become the backbone of digital payments in India. As transaction volume and user adoption continue to grow, payment platforms must optimize both operational reliability and user engagement.
 
-This project simulates a real-world fintech product analytics use case by analyzing UPI transaction data and engineering user-level product dimensions to uncover insights related to transaction reliability, user behavior, retention, segmentation, and platform performance.
+This project simulates a real-world fintech product analytics use case by analyzing UPI transaction data and engineering user-level product dimensions to uncover insights related to transaction reliability, user behavior, retention, segmentation, platform performance, and growth opportunities.
 
-The project combines operational analytics with product analytics to identify opportunities for improving payment success rates, customer engagement, and platform growth.
+Synthetic user-level attributes were engineered using realistic fintech behavioral assumptions to simulate real-world product analytics scenarios.
+
+The project combines operational analytics with product analytics to identify opportunities for improving payment success rates, customer engagement, platform reliability, and long-term user retention.
 
 ---
 
@@ -14,36 +16,43 @@ The project combines operational analytics with product analytics to identify op
 
 Transaction failures, user drop-offs, inconsistent engagement, platform-specific performance issues, and abnormal transaction behavior can negatively impact customer trust, retention, and revenue.
 
-This project aims to answer questions such as:
+This project aims to answer key business questions such as:
 
 * What drives transaction failures?
-* Which banks or transaction types contribute most to failures?
-* Which users are highly engaged?
-* How do verified users behave differently?
-* Which payment apps drive higher engagement?
+* Which banks, transaction types, or payment apps contribute most to failures?
+* Which users are highly engaged or at risk of churn?
+* How do verified users behave differently from non-verified users?
+* Which payment apps drive higher engagement and retention?
 * What merchant categories generate the highest activity?
-* What user segments contribute most to platform growth?
+* When do peak transaction periods occur?
+* Which user segments contribute most to platform growth?
 
 ---
 
 ## Project Objectives
 
-* Analyze transaction success and failure patterns
-* Measure platform reliability metrics
+This project aims to:
+
+* Analyze overall UPI transaction trends
+* Measure transaction success and failure patterns
 * Analyze Daily Active Users (DAU), Weekly Active Users (WAU), and Monthly Active Users (MAU)
-* Perform retention and cohort analysis
-* Identify power users and repeat transaction behavior
-* Compare payment app performance
-* Analyze user behavior by KYC status
-* Compare Android vs iOS engagement
+* Measure user retention and repeat transaction behavior
+* Perform cohort analysis using user signup dates
+* Identify power users and transaction frequency segments
+* Analyze engagement and transaction behavior across payment apps
+* Analyze transaction reliability across banks and transaction types
+* Compare verified vs non-verified user behavior
+* Compare Android vs iOS transaction behavior
 * Analyze merchant category behavior
-* Detect anomalies and operational bottlenecks
+* Identify peak transaction periods
+* Detect unusual transaction patterns and operational anomalies
+* Generate product and operational recommendations
 
 ---
 
 ## Dataset
 
-### Original Dataset
+### Primary Dataset
 
 File:
 
@@ -52,7 +61,7 @@ File:
 Contains transaction-level attributes such as:
 
 * Transaction ID
-* Timestamp
+* Transaction Timestamp
 * Transaction Amount
 * Transaction Status
 * Bank Details
@@ -62,7 +71,7 @@ Contains transaction-level attributes such as:
 
 ### Synthetic Product Enrichment
 
-To simulate real-world product analytics scenarios, additional user-level dimensions were engineered using realistic fintech assumptions.
+To simulate real-world product analytics scenarios, additional user-level dimensions were synthetically engineered using realistic fintech behavioral assumptions.
 
 Engineered attributes:
 
@@ -73,7 +82,7 @@ Engineered attributes:
 * `device_type`
 * `merchant_category`
 
-These attributes are created solely for analytical modeling and portfolio simulation.
+These engineered fields are created solely for analytical modeling and portfolio simulation purposes.
 
 ---
 
@@ -86,101 +95,16 @@ Synthetic Data Enrichment
    ↓
 Data Cleaning & Validation
    ↓
-SQL Analysis
+Exploratory Data Analysis
+   ↓
+Feature Engineering
+   ↓
+SQL Business Analysis
    ↓
 Product KPI Analysis
+   ↓
+Statistical Analysis & Anomaly Detection
    ↓
 Dashboard Development
    ↓
 Business Recommendations
-```
-
----
-
-## Project Structure
-
-```text
-upi-product-analytics/
-│
-├── data/
-│   ├── raw/
-│   ├── enriched/
-│   └── processed/
-│
-├── notebooks/
-├── sql/
-├── dashboard/
-├── docs/
-├── scripts/
-├── README.md
-└── project_charter.md
-```
-
----
-
-## Technologies Used
-
-* Python
-* Jupyter Notebook
-* pandas
-* NumPy
-* SQL
-* Dashboard Tool (To be added)
-
----
-
-## Current Status
-
-### Completed
-
-* Project Charter
-* Folder Structure
-* Dataset Loading
-* Synthetic Product Data Enrichment
-
-Completed engineered attributes:
-
-* user_id
-* app_name
-* user_signup_date
-* kyc_status
-* device_type
-* merchant_category
-
----
-
-## Next Steps
-
-* Data Cleaning
-* Missing Value Analysis
-* Duplicate Analysis
-* Outlier Detection
-* Feature Engineering
-* SQL Business Analysis
-* Product KPI Analysis
-* Cohort Analysis
-* Retention Analysis
-* Dashboard Development
-
----
-
-## Key Product Metrics (Planned)
-
-* DAU
-* WAU
-* MAU
-* Retention Rate
-* Repeat Transaction Rate
-* Success Rate
-* Failure Rate
-* Power User Ratio
-* App Adoption Rate
-* KYC Conversion Rate
-
----
-
-## Author
-
-**Aniket Koli**
-
-Aspiring Product Analyst | Data Analyst | Fintech Analytics
