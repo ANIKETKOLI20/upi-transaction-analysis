@@ -108,9 +108,13 @@ Statistical Analysis & Anomaly Detection
 Dashboard Development
    ↓
 Business Recommendations
-
 ```
-### Project Structure
+
+---
+
+## Project Structure
+
+```text
 upi-product-analytics/
 │
 ├── data/
@@ -125,12 +129,105 @@ upi-product-analytics/
 ├── scripts/
 ├── README.md
 └── project_charter.md
+```
 
-### Technologies Used
-Python
-SQL
-Jupyter Notebook
-pandas
-NumPy
-Statistical Analysis
-Dashboarding Tools (Power BI / Tableau)
+---
+
+## Technologies Used
+
+* Python
+* SQL
+* Jupyter Notebook
+* pandas
+* NumPy
+* Statistical Analysis
+* Power BI / Tableau
+
+---
+
+## Current Status (Phase 1 Completed)
+
+### Completed
+
+* Project Charter
+* Folder Structure
+* Dataset Loading
+* Synthetic Product Data Enrichment
+
+Completed engineered attributes:
+
+* `user_id`
+* `app_name`
+* `user_signup_date`
+* `kyc_status`
+* `device_type`
+* `merchant_category`
+
+---
+
+## Next Steps
+
+* Data Cleaning
+* Missing Value Analysis
+* Duplicate Analysis
+* Outlier Detection
+* Exploratory Data Analysis
+* Feature Engineering
+* SQL Business Analysis
+* Product KPI Analysis
+* Cohort Analysis
+* Retention Analysis
+* Statistical Analysis
+* Anomaly Detection
+* Dashboard Development
+* Business Recommendations
+
+---
+
+## Key Product & Operational Metrics
+
+* Overall Transaction Success Rate (%)
+* Overall Transaction Failure Rate (%)
+* Daily Active Users (DAU)
+* Weekly Active Users (WAU)
+* Monthly Active Users (MAU)
+* User Retention Rate (%)
+* Repeat Transaction Rate (%)
+* Power User Ratio (%)
+* Average Transaction Value
+* Transaction Frequency per User
+* Failure Rate by Bank
+* Failure Rate by Payment App
+* Failure Rate by Transaction Type
+* Failure Rate by Merchant Category
+* Verified User Conversion Rate
+* Platform-wise Engagement Rate
+* High-value Transaction Percentage
+* App Adoption Rate
+* Anomaly Detection Rate
+
+---
+
+## Deliverables
+
+This project will deliver:
+
+* Enriched analytical dataset
+* SQL queries for business and product analysis
+* Python-based exploratory data analysis
+* User segmentation analysis
+* Cohort and retention analysis
+* Product KPI dashboard
+* Operational KPI dashboard
+* Statistical insights
+* Anomaly detection insights
+* Interactive visualizations
+* Final product and operational recommendations report
+
+---
+
+## Author
+
+**Aniket Koli**
+
+Aspiring Product Analyst | Data Analyst | Fintech Analytics
