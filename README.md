@@ -108,3 +108,29 @@ Statistical Analysis & Anomaly Detection
 Dashboard Development
    ↓
 Business Recommendations
+
+```
+### Project Structure
+upi-product-analytics/
+│
+├── data/
+│   ├── raw/
+│   ├── enriched/
+│   └── processed/
+│
+├── notebooks/
+├── sql/
+├── dashboard/
+├── docs/
+├── scripts/
+├── README.md
+└── project_charter.md
+
+### Technologies Used
+Python
+SQL
+Jupyter Notebook
+pandas
+NumPy
+Statistical Analysis
+Dashboarding Tools (Power BI / Tableau)
