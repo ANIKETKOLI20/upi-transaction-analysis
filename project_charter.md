@@ -1,150 +1,170 @@
-# PROJECT CHARTER
-
-## 1. Project Name
-
-**Growth & Reliability Analytics for a UPI Payments Platform**
+# PROJECT CHARTER  
+# Improving User Activation, Engagement, and Retention in a UPI Payments Ecosystem
 
 ---
 
-## 2. Business Problem / Purpose
+# 1. Executive Problem Statement
 
-Unified Payments Interface (UPI) has become the backbone of digital payments in India. As transaction volume and user adoption continue to grow, payment platforms must optimize both operational reliability and user engagement.
+India’s UPI ecosystem processes millions of digital transactions daily, where sustained user engagement, repeat transaction behavior, and platform trust directly influence long-term growth and ecosystem value.
 
-Transaction failures, user drop-offs, inconsistent engagement, platform-specific performance issues, and abnormal transaction behavior can negatively impact customer trust, retention, and revenue.
+While transaction success remains consistently high, differences in onboarding behavior, KYC completion, platform usage patterns, transaction frequency, and merchant engagement may significantly impact user activation, retention, and long-term product engagement.
 
-This project aims to analyze UPI transaction data combined with engineered user-level product dimensions to identify user behavior patterns, transaction reliability issues, engagement drivers, operational bottlenecks, and actionable product opportunities that can improve platform growth, customer retention, and payment success rates.
-
----
-
-## 3. Project Objectives
-
-This project aims to:
-
-* Analyze overall UPI transaction trends
-* Measure transaction success and failure rates
-* Analyze Daily Active Users (DAU), Weekly Active Users (WAU), and Monthly Active Users (MAU)
-* Measure user retention and repeat transaction behavior
-* Perform cohort analysis using user signup dates
-* Identify power users and transaction frequency segments
-* Analyze transaction behavior across payment apps, banks, and merchant categories
-* Compare verified vs non-verified user behavior
-* Compare Android vs iOS transaction behavior
-* Identify peak transaction periods
-* Detect unusual transaction patterns or anomalies
-* Generate product and operational recommendations based on findings
+This project aims to identify behavioral and product-level drivers influencing user activation, repeat usage, retention, and high-value engagement, and translate those findings into actionable product recommendations.
 
 ---
 
-## 4. Success Metrics / KPIs
+# 2. Business Context
 
-The success of this project will be measured using the following KPIs:
+UPI platforms create sustainable growth through:
 
-* Overall transaction success rate (%)
-* Overall transaction failure rate (%)
-* Daily Active Users (DAU)
-* Weekly Active Users (WAU)
-* Monthly Active Users (MAU)
-* User retention rate (%)
-* Repeat transaction rate (%)
-* Average transaction value
-* Transaction frequency per user
-* Failure rate by bank
-* Failure rate by payment app
-* Failure rate by merchant category
-* Verified user conversion rate
-* Platform-wise engagement rate
-* High-value transaction percentage
-* Anomaly detection rate
+- Frequent user engagement
+- Repeat transaction behavior
+- Merchant ecosystem participation
+- Strong onboarding experiences
+- Long-term user retention
+
+Core business risks include:
+
+- Low first-week activation
+- Weak repeat transaction behavior
+- Poor KYC adoption
+- Platform-specific engagement gaps
+- Early lifecycle drop-offs
+- Limited merchant engagement diversity
 
 ---
 
-## 5. Project Scope
+# 3. Core Product Journey
 
-This project includes:
-
-* Analysis of UPI transaction data for the year 2024
-* Synthetic enrichment of user-level product dimensions
-* Analysis of successful and failed transactions
-* User lifecycle analysis
-* Cohort analysis
-* Retention analysis
-* Transaction frequency analysis
-* Payment app performance analysis
-* Merchant category analysis
-* Device segmentation analysis
-* Exploratory data analysis (EDA)
-* Statistical analysis
-* Product analytics
-* Operational analytics
-* Data visualization
-* Dashboard/report creation
-* Business insight generation
+Signup  
+→ KYC Completion  
+→ First Transaction  
+→ Repeat Usage  
+→ Habit Formation  
+→ Power User Engagement
 
 ---
 
-## 6. Out of Scope
+# 4. Project Objectives
 
-This project does not include:
+This project aims to support product decision-making by:
 
-* Real-time fraud prevention implementation
-* Live payment gateway integration
-* Production deployment
-* Backend engineering implementation
-* International payment analysis
-* Credit/debit card transaction analysis
-* Actual customer identity verification
-* Regulatory compliance implementation
-
----
-
-## 7. Data Sources
-
-### Primary Dataset
-
-* `upi_transactions_2024.csv`
-
-### Original Dataset Attributes
-
-* Transaction ID
-* Transaction timestamp
-* Transaction amount
-* Transaction status
-* Bank details
-* Transaction type
-
-### Engineered Product Analytics Attributes
-
-To simulate real-world product analytics scenarios, additional user-level dimensions were synthetically engineered using domain assumptions and realistic fintech behavioral patterns.
-
-Engineered attributes include:
-
-* `user_id`
-* `app_name`
-
-  * Examples: Google Pay, PhonePe, Paytm
-* `user_signup_date`
-* `kyc_status`
-* `device_type`
-* `merchant_category`
-
-These engineered fields are created solely for analytical modeling and portfolio simulation purposes and are not part of the original source dataset.
+- Identifying overall transaction growth trends, usage patterns, and seasonality across the UPI ecosystem
+- Measuring Daily Active Users (DAU), Weekly Active Users (WAU), and Monthly Active Users (MAU) to evaluate engagement health
+- Measuring user retention and repeat transaction behavior to identify churn risks and habit formation patterns
+- Performing cohort analysis using user signup dates to evaluate onboarding effectiveness and long-term engagement
+- Identifying power users and transaction frequency segments to uncover loyalty and monetization opportunities
+- Analyzing transaction behavior across payment apps, banks, and merchant categories to identify ecosystem performance drivers
+- Comparing verified versus non-verified user behavior to evaluate the impact of KYC completion on activation and retention
+- Comparing Android versus iOS transaction behavior to identify platform-specific engagement differences
+- Identifying peak transaction periods to understand user behavior and infrastructure demand
+- Generating product recommendations based on analytical findings
 
 ---
 
-## 8. Deliverables
+# 5. Strategic Business Priorities
 
-This project will deliver:
+## Priority 1 — Improve User Activation
 
-* Enriched analytical dataset
-* SQL queries for product and business analysis
-* Python-based exploratory data analysis
-* User segmentation analysis
-* Retention and cohort analysis
-* Product KPI dashboard
-* Operational KPI dashboard
-* Statistical insights
-* Anomaly detection insights
-* Interactive visualizations
-* Final product and operational recommendations report
+Goal:
+
+Understand how signup timing, KYC completion, and first transaction behavior influence early activation.
+
+Business impact:
+
+- Improved onboarding efficiency
+- Reduced acquisition waste
+- Higher activation
 
 ---
+
+## Priority 2 — Improve User Retention
+
+Goal:
+
+Identify behavioral patterns associated with repeat usage and long-term engagement.
+
+Business impact:
+
+- Reduced churn
+- Higher retained users
+- Increased transaction volume
+
+---
+
+## Priority 3 — Identify High-Value Users
+
+Goal:
+
+Understand behaviors associated with:
+
+- Power users
+- High-frequency users
+- High-value users
+
+Business impact:
+
+- Better monetization
+- Loyalty optimization
+- Merchant ecosystem growth
+
+---
+
+# 6. Decision Ownership / Stakeholders
+
+- Product Management Team
+- Growth Team
+- Customer Experience Team
+- Business Leadership
+
+---
+
+# 7. Analytical Hypotheses
+
+## H1
+
+Users completing KYC exhibit higher activation and retention.
+
+## H2
+
+Users completing a successful first-week transaction show higher repeat behavior.
+
+## H3
+
+Power users transact across more merchant categories than casual users.
+
+## H4
+
+Android and iOS users demonstrate different engagement patterns.
+
+## H5
+
+Users with higher transaction frequency show stronger monthly retention.
+
+## H6
+
+Users engaging across multiple merchant categories exhibit higher long-term engagement.
+
+---
+
+# 8. North Star Metrics
+
+- Monthly Active Transacting Users (MATU)
+- Transactions per Active User
+- 30-Day Retention Rate
+- First-Week Activation Rate
+
+---
+
+# 9. Deliverables
+
+- Cleaned analytical fact table
+- SQL metric layer
+- Python behavioral analysis
+- Cohort models
+- Segmentation models
+- Executive dashboard
+- Product KPI dashboard
+- Product recommendations
+- Portfolio case study
+- Interview-ready storytelling deck
