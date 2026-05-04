@@ -1,15 +1,15 @@
 # PROJECT CHARTER  
-# Improving User Activation, Engagement, and Retention in a UPI Payments Ecosystem
+# Improving User Activation, Engagement, Retention, and Product Optimization in a UPI Payments Ecosystem
 
 ---
 
 # 1. Executive Problem Statement
 
-India’s UPI ecosystem processes millions of digital transactions daily, where sustained user engagement, repeat transaction behavior, and platform trust directly influence long-term growth and ecosystem value.
+India’s digital payments ecosystem processes millions of UPI transactions daily, where sustained user engagement, seamless onboarding, transaction trust, and repeat payment behavior directly influence platform growth, ecosystem expansion, and long-term monetization.
 
-While transaction success remains consistently high, differences in onboarding behavior, KYC completion, platform usage patterns, transaction frequency, and merchant engagement may significantly impact user activation, retention, and long-term product engagement.
+While transaction success rates remain consistently high, variations in onboarding behavior, KYC completion, first transaction success, merchant engagement, transaction frequency, and platform interaction may significantly impact user activation, retention, churn risk, and high-value engagement.
 
-This project aims to identify behavioral and product-level drivers influencing user activation, repeat usage, retention, and high-value engagement, and translate those findings into actionable product recommendations.
+This project aims to identify behavioral, lifecycle, and product-level drivers influencing user activation, repeat usage, retention, churn, and power-user behavior, and translate these findings into actionable product recommendations, experimentation opportunities, and product instrumentation strategies.
 
 ---
 
@@ -17,20 +17,24 @@ This project aims to identify behavioral and product-level drivers influencing u
 
 UPI platforms create sustainable growth through:
 
+- Strong onboarding experiences
+- Fast activation
 - Frequent user engagement
 - Repeat transaction behavior
 - Merchant ecosystem participation
-- Strong onboarding experiences
 - Long-term user retention
+- High-value user monetization
 
 Core business risks include:
 
-- Low first-week activation
-- Weak repeat transaction behavior
-- Poor KYC adoption
-- Platform-specific engagement gaps
+- Low signup-to-activation conversion
+- Weak KYC completion
+- Poor first-week transaction behavior
 - Early lifecycle drop-offs
-- Limited merchant engagement diversity
+- Low repeat transaction frequency
+- Platform-specific engagement gaps
+- Limited merchant ecosystem diversity
+- High user churn risk
 
 ---
 
@@ -38,31 +42,102 @@ Core business risks include:
 
 Signup  
 → KYC Completion  
-→ First Transaction  
+→ First Successful Transaction  
+→ Second Transaction  
 → Repeat Usage  
 → Habit Formation  
 → Power User Engagement
 
 ---
 
-# 4. Project Objectives
+# 4. Product Funnel Framework
 
-This project aims to support product decision-making by:
+This project will explicitly measure drop-offs across key lifecycle stages:
 
-- Identifying overall transaction growth trends, usage patterns, and seasonality across the UPI ecosystem
-- Measuring Daily Active Users (DAU), Weekly Active Users (WAU), and Monthly Active Users (MAU) to evaluate engagement health
-- Measuring user retention and repeat transaction behavior to identify churn risks and habit formation patterns
-- Performing cohort analysis using user signup dates to evaluate onboarding effectiveness and long-term engagement
-- Identifying power users and transaction frequency segments to uncover loyalty and monetization opportunities
-- Analyzing transaction behavior across payment apps, banks, and merchant categories to identify ecosystem performance drivers
-- Comparing verified versus non-verified user behavior to evaluate the impact of KYC completion on activation and retention
-- Comparing Android versus iOS transaction behavior to identify platform-specific engagement differences
-- Identifying peak transaction periods to understand user behavior and infrastructure demand
-- Generating product recommendations based on analytical findings
+Signup  
+→ KYC Completion  
+→ First Successful Transaction  
+→ Second Transaction  
+→ 7-Day Active  
+→ 30-Day Retained
+
+Funnel metrics:
+
+- Signup to KYC Conversion Rate
+- KYC to First Transaction Conversion Rate
+- First to Second Transaction Conversion Rate
+- First-Week Activation Rate
+- 7-Day Retention Rate
+- 30-Day Retention Rate
+- Stage-wise Drop-off Rate
+
+Business impact:
+
+- Identify onboarding friction
+- Reduce early abandonment
+- Improve activation efficiency
 
 ---
 
-# 5. Strategic Business Priorities
+# 5. Project Objectives
+
+This project aims to support product decision-making by:
+
+## User Growth & Engagement
+
+- Identify overall transaction growth trends, seasonality, and engagement patterns
+- Measure Daily Active Users (DAU), Weekly Active Users (WAU), Monthly Active Users (MAU), and Monthly Active Transacting Users (MATU)
+- Analyze transaction frequency and engagement intensity
+
+## Activation & Funnel Optimization
+
+- Measure signup-to-KYC conversion
+- Measure KYC-to-first-transaction conversion
+- Measure first-to-second transaction conversion
+- Identify lifecycle drop-offs
+
+## Retention & Cohort Analysis
+
+- Perform cohort analysis using signup dates
+- Measure first-week activation
+- Measure 7-day, 30-day retention
+- Analyze repeat transaction behavior
+
+## User Segmentation
+
+- Identify casual users
+- Identify repeat users
+- Identify power users
+- Identify high-value users
+
+## Behavioral Analytics
+
+- Analyze merchant diversity
+- Analyze platform-specific behavior
+- Analyze bank-specific engagement
+- Analyze device-specific behavior
+
+## Churn Analytics
+
+- Identify churn risk indicators
+- Predict users likely to become inactive
+- Analyze behaviors associated with churn
+
+## Experimentation Opportunities
+
+- Identify product optimization opportunities
+- Simulate quasi-experiments using behavioral cohorts
+- Estimate impact of product changes
+
+## Product Instrumentation
+
+- Design inferred product event taxonomy
+- Identify instrumentation gaps
+- Recommend event tracking strategy
+
+---
+
+# 6. Strategic Business Priorities
 
 ## Priority 1 — Improve User Activation
 
@@ -110,16 +185,59 @@ Business impact:
 
 ---
 
-# 6. Decision Ownership / Stakeholders
+## Priority 4 — Reduce Funnel Drop-Off
+
+Goal:
+
+Identify major drop-off stages across onboarding and activation.
+
+Business impact:
+
+- Improved conversion
+- Reduced abandonment
+- Faster activation
+
+---
+
+## Priority 5 — Predict Churn Risk
+
+Goal:
+
+Identify users likely to become inactive.
+
+Business impact:
+
+- Early intervention
+- Reduced churn
+- Improved lifecycle retention
+
+---
+
+## Priority 6 — Identify Product Experiment Opportunities
+
+Goal:
+
+Evaluate behavioral cohorts to identify product improvement opportunities.
+
+Business impact:
+
+- Data-driven optimization
+- Feature prioritization
+- Conversion improvement
+
+---
+
+# 7. Decision Ownership / Stakeholders
 
 - Product Management Team
 - Growth Team
 - Customer Experience Team
+- Data Team
 - Business Leadership
 
 ---
 
-# 7. Analytical Hypotheses
+# 8. Analytical Hypotheses
 
 ## H1
 
@@ -145,24 +263,139 @@ Users with higher transaction frequency show stronger monthly retention.
 
 Users engaging across multiple merchant categories exhibit higher long-term engagement.
 
+## H7
+
+Users completing second transactions within 7 days demonstrate lower churn.
+
+## H8
+
+Users with higher merchant diversity exhibit stronger retention.
+
+## H9
+
+KYC-completed users demonstrate lower funnel drop-off.
+
+## H10
+
+High-frequency users demonstrate lower churn probability.
+
 ---
 
-# 8. North Star Metrics
+# 9. Quasi-Experimentation Framework
+
+The project will simulate observational product experiments:
+
+## Experiment 1
+
+KYC Completed vs Non-KYC Users
+
+Metrics:
+
+- First-week activation
+- 30-day retention
+
+## Experiment 2
+
+Android vs iOS Users
+
+Metrics:
+
+- Transaction frequency
+- Retention
+
+## Experiment 3
+
+Low Merchant Diversity vs High Merchant Diversity
+
+Metrics:
+
+- Monthly retention
+- Transaction frequency
+
+## Experiment 4
+
+Early Second Transaction vs Delayed Second Transaction
+
+Metrics:
+
+- Churn probability
+- Long-term retention
+
+---
+
+# 10. Churn Framework
+
+Churn Definition:
+
+A user with no successful transaction activity in the next 30 days.
+
+Churn features:
+
+- Recency
+- Transaction frequency
+- Monetary value
+- Merchant diversity
+- KYC completion
+- Platform usage
+- Device type
+
+Deliverables:
+
+- Churn segmentation
+- Churn prediction model
+- Feature importance analysis
+
+---
+
+# 11. Product Event Taxonomy (Inferred)
+
+## Lifecycle Events
+
+- signup_completed
+- kyc_completed
+- first_transaction_success
+- second_transaction_success
+- repeat_transaction
+- churn_risk_detected
+
+## Transaction Events
+
+- payment_success
+- payment_failed
+- merchant_expansion
+- high_value_transaction
+
+## Behavioral Events
+
+- power_user_unlocked
+- category_expansion
+- retention_milestone
+
+---
+
+# 12. North Star Metrics
 
 - Monthly Active Transacting Users (MATU)
 - Transactions per Active User
-- 30-Day Retention Rate
 - First-Week Activation Rate
+- 30-Day Retention Rate
+- Funnel Conversion Rate
+- Churn Rate
+- Power User Rate
 
 ---
 
-# 9. Deliverables
+# 13. Deliverables
 
 - Cleaned analytical fact table
 - SQL metric layer
-- Python behavioral analysis
+- Funnel dashboard
 - Cohort models
+- Retention models
+- Churn prediction models
 - Segmentation models
+- Experimentation analysis
+- Event taxonomy framework
 - Executive dashboard
 - Product KPI dashboard
 - Product recommendations
